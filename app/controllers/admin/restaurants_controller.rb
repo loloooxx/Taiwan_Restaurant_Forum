@@ -23,7 +23,7 @@ class Admin::RestaurantsController < Admin::BaseController
 
   def update
     if @restaurant.update(restaurant_params)
-      flash[:notice] = "restaurant was successfully update"
+      flash[:notice] = "restaurant was successfully updated"
       redirect_to admin_restaurant_path(@restaurant)
     else
       flash.now[:alert] = "restaurant was failed to update"
