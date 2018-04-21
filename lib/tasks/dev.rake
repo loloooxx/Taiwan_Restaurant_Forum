@@ -16,10 +16,12 @@ namespace :dev do
   end
 
   task fake_user: :environment do
-
+    
     20.times do |i|
-      User.create!(email: FFaker::Internet.disposable_email,
-        password: FFaker::Internet.password
+      User.create!(
+        email: FFaker::Internet.disposable_email,
+        password: FFaker::Internet.password,
+        name: FFaker::Name.first_name
         )
     end
     puts "have created 20 fake users"
