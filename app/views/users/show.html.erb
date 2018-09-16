@@ -16,10 +16,10 @@
           <p><strong><%= @user.email %></strong></p>
           <!-- inline & unstyled 的 list -->
           <ul class="list-unstyled list-inline">
-            <li><strong><%= @commented_restaurants.count %></strong> 已評論餐廳</li>
-            <li><strong><%= @favorited_restaurants.count %></strong> 收藏的餐廳</li>
-            <li><strong><%= @followings.count %></strong> followings</li>
-            <li><strong><%= @followers.count %></strong> followers</li>
+            <li><strong><%= @commented_restaurants.count %></strong> Commented Restaurants</li>
+            <li><strong><%= @favorited_restaurants.count %></strong> Favorite Restaurants</li>
+            <li><strong><%= @followings.count %></strong> Followings</li>
+            <li><strong><%= @followers.count %></strong> Followers</li>
           </ul>
           <div><%= simple_format @user.intro %></div>
           <% if @user.email == current_user.email %>
@@ -36,7 +36,7 @@
         <!-- 顯示followings的清單，panel包一個list-group  -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><%= @followings.count %></strong> followings</h3>
+            <h3 class="panel-title"><%= @followings.count %></strong> Followings</h3>
           </div>
 
           <ul class="list-group">
@@ -54,7 +54,7 @@
         <!-- 顯示followers的清單，panel包一個list-group  -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><%= @followers.count %></strong> followers</h3>
+            <h3 class="panel-title"><%= @followers.count %></strong> Followers</h3>
           </div>
 
           <ul class="list-group">
@@ -75,7 +75,7 @@
         <!-- 顯示已評論餐廳的清單，panel包一個panel-body裡面使用row>col的layouts來顯示評論 -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><strong><%= @commented_restaurants.count %></strong> 已評論餐廳</h3>
+            <h3 class="panel-title"><strong><%= @commented_restaurants.count %></strong> Conmented Restaurants</h3>
           </div>
           <div class="panel-body">
             <% @commented_restaurants.each do |restaurant| %>
@@ -95,7 +95,7 @@
         <!-- 顯示收藏的餐廳的清單，panel包一個panel-body裡面簡單顯示餐廳圖片和name -->
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title"><strong><%= @favorited_restaurants.count %></strong> 收藏的餐廳</h3>
+            <h3 class="panel-title"><strong><%= @favorited_restaurants.count %></strong> Favorite Restaurants</h3>
           </div>
 
           <div class="panel-body">

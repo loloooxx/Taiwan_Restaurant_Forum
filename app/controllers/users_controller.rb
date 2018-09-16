@@ -24,10 +24,10 @@ class UsersController < ApplicationController
   def update    
 
     if @user.update(user_params)
-      flash[:notice] = "user information was successfully updated"
+      flash[:notice] = "User information was successfully updated"
       redirect_to user_path(@user)
     else
-      flash.now[:alert] = "user information was failed to update"
+      flash.now[:alert] = "User information was failed to update"
       render :edit
     end
   end

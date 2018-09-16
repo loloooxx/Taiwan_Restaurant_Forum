@@ -5,13 +5,13 @@
     <!-- https://getbootstrap.com/docs/3.3/components/#nav-tabs -->
     <ul class="nav nav-tabs">
       <li role="presentation">
-        <%= link_to '首頁', root_path %>
+        <%= link_to 'HOME', root_path %>
       </li>
       <li role="presentation" class="active">
-        <%= link_to '最新動態', feeds_restaurants_path %>
+        <%= link_to 'NEWS FEEDS', feeds_restaurants_path %>
       </li>
       <li role="presentation">
-        <%= link_to '美食達人', users_path %>
+        <%= link_to 'FOODIES', users_path %>
       </li>
     </ul>
 
@@ -24,11 +24,11 @@
   <div class="row">
 
     <div class="col-md-10 col-md-offset-1">
-      <h1>餐廳最新動態</h1>
+      <h1>NEWS FEEDS</h1>
       <hr>
       <div class="col-md-6">
         <div class="panel panel-default">
-          <div class="panel-heading">最新餐廳</div>
+          <div class="panel-heading">NEW RESTAURANTS</div>
           <div class="panel-body">
             <% @recent_restaurants.each do |restaurant| %>
               <div>
@@ -46,7 +46,7 @@
 
       <div class="col-md-6">
         <div class="panel panel-default">
-          <div class="panel-heading">最新評論</div>
+          <div class="panel-heading">LATEST COMMENTS</div>
           <div class="panel-body">
             <% @recent_comments.each do |comment| %>
               <div>
